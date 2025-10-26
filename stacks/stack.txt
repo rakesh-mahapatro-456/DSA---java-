@@ -1,0 +1,26 @@
+stack is a collection of elements in which data is stored one above another
+stack which is used in recursions is known as implicit stack i.e we need not create stack manually instead it is created automatically by java
+
+the stack which we use here is explicit stack i.e we create it manually 
+examples : stack of books,stack of coins
+
+
+| 30 |  <- Top
+| 20 |
+| 10 |
+ ----
+
+there are three operations which can be performed on a stack :
+ 1. push - O(1) - adding elements in a stack from only one ditrection its possible that is Top
+ 2. pop - O(1) - removing elements from the stack from only one ditrection its possible that is Top
+ 3. peek - O(1) - it is used to acess the top element of the stack
+
+the top element is known as top 
+
+stack data structure is also known as LIFO data structure i.e the topmost element is either deleted or new topmost element is added any operations on the stack is always performed on the top of the element and element which is added at last is removed first
+
+
+implementation :
+1. arrays - only fixed size of stack is possible i.e only stack of size n . we keep track of the last element as top of the stack and perform operations on it
+2. arrayList - variable size similar to arrays in implementation way only when its full the old array is copied into new array of the double size of prev array
+3. linked list - variable size . ll head = top  of the stack

@@ -1,0 +1,10 @@
+we find nth node from the last and unlink its prevnode and link it with next node of the curr node i.e delete in middle
+
+
+how to find nth node from last?
+we cannot traverse ll from back as it is link forward only and if try to make its copy and reverse it and then remove nth node it will have more no.of steps and sc&tc will be in creasing
+
+we can calculate nth node from the last  by using :
+(size-n+1)
+
+but,here we run the loop till (size-n) only as we have to destroy the link with nth node due to which java garbage collector will automatically delete nth node from ll  and memory

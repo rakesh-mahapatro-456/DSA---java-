@@ -1,0 +1,1 @@
+we use a stack and push all the characters of the string in it and then pop it . as we pop the string gets reversed automatically

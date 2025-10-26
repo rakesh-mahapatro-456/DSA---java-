@@ -1,0 +1,47 @@
+i/p : 1->2->2->1->null
+o/p : True
+
+
+i/p : 1->3->5->7->null
+o/p : false
+
+
+we will learn slow-fast concept , revrsing a linkede list half
+to check whether a ll is palindrome there are several ways :
+1. store ll in a arraylist or array or string then check whether its palindrome or not int his method space coplexity and time complexity will be O(n) as we are using extr space
+2. approach with tc :O(n) ans sc:O(1)
+
+s1 : find mid node of ll
+    middle can be calculated using size or by using slow-fast apparoach
+    -in slow fast apparoach we take 2 pointers
+        slow = head --> this will move in front of ll by 1 step (turtle pointer)
+        fast = head --> this will move in front of ll by 2 step  (hare (i.e rabbit) pointer)
+        here, slow covers size of ll and fast covers size/2
+
+    - to claculate middle of ll using slow fast apparoach 
+    even case :
+        we run a loop till fast is null due to which slow will point/land on the middle of the ll 
+
+    odd case :
+    we run a loop till fast.next is null due to which slow will point/land on the middle of the ll as after fast reaches last node it cant take any further 2 steps in ll
+
+s2 : reverse the 2nd half of the ll 
+    we have the reverse the 2nd half of the ll from the mid of ll i.e 
+    1->2->2->1->null
+    1->2->2<-1
+        | 
+        null (mid element points towards null)
+    here we call the reverse function which we created on 2nd half of the ll
+
+    we reverse 2nd half so that we can traverse backwaards as it is not posible in a normal ll
+
+
+s3 : check if 1st half is equal to 2nd half
+    here we take 2 two variables one points towards end of ll and other points towards tail of ll i.e in this case after reversing it will be the head of 2nd half of ll
+    we check if left value is equal right value and move forward till we encounter null i.e mid 
+
+
+example :
+even case : 1->2->2->1->null
+middle node is 2 (3)
+

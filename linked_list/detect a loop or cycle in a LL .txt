@@ -1,0 +1,27 @@
+Head -> Node1 -> Node2 -> Node3 -> Node4 -> Node2 (cycle starts here)
+
+Head -> Node1 -> Node2 -> Node3 -> Node4
+                 ^                    |
+                 |--------------------|
+
+
+we use floyd's cycle finding algorithm to detect whether a loop exists in a ll or not
+
+we use slow-fast apparoach here also
+slow moves with 1 steps
+fast moves with 2 steps
+
+we can detect a cycle in a ll when slow and fast pointer meet at a same node 
+
+if slow == fast -->true else --> false
+
+
+
+no.of moves taken                 distance (fast&slow)
+0 moves                              0
+1 move                               1
+2 moves                              2
+3 moves                              3
+....                               ..... d distance
+
+let d be the nodes or be the dist in which loop of the ll exists. at some point both slow and fast will meet at d distance i.e it will be the total distance

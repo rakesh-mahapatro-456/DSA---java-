@@ -1,0 +1,22 @@
+Reverse a Linked list :
+i/p : 1->2->3->4->null
+o/p : null <-1<-2<-3<-4
+
+there are 4 steps in reversing it 
+we require 3 variables named prev,curr,next these are used in order to reverse the link present between these nodes i.e
+before : prev ->curr->next
+after  : prev <-curr<-next
+
+
+curr = head
+prev = head
+
+
+while(curr != null){
+
+    step 1 :next = curr.next // next's next to curr
+    step 2 :curr.next = prev // curr next to prev actual reversing step
+    step 3 :prev = curr // changing prev node after reverse to curr
+    step 4 :curr = next // changing curr node after reverse to next
+
+}

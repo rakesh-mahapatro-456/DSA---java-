@@ -1,0 +1,1 @@
+here first we pop all the elements from stack and then when stack is empty then we push the elements(top) at the bottoom of the stack using pushbottom() function.

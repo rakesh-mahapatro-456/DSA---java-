@@ -1,0 +1,4 @@
+push the give data item at the bottom of the stack
+we will use recursion and tc:)O(n) and sc :O(1)
+
+we first pop all the elements from the stack store in the top variable we call pushbottom() function recursively to pop all the elements.when the stackis empty then we push the given data and return after that we push all the data items in the order how we popeed them

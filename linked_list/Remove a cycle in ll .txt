@@ -1,0 +1,16 @@
+here, we find the node which is forming a loop and make it point yowards null
+steps :
+s1 : detect cycle
+    a. slow = head
+    b.prev = null --> tracks the prev node of fast
+    c. while(slow == fast){
+        slow -->+1
+        prev = fast //prev of fast
+        fast -->+1
+        slow and fast move by 1 step due to which both of them meet at the point where the last node in the ll is joining again in ll to make a loop i.e they meet lastnode+1 th node in the ll
+    }
+    d. prev.next = null ; // last node
+
+
+
+    note : write explanation from the videoo in the notes

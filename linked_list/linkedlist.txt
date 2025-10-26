@@ -1,0 +1,85 @@
+1 -> 2 -> 3 -> null
+
+-> is a link between data
+1,2,3,4 are data items / nodes
+
+linked list is a data structure in which data is tsorred in linear fashion and dat is connected with each other through chains
+
+there are 2 parts inside a node :
+1. data/node - information of any data type which you whish to store.you have to first declare the type of data which you want to store
+2. next - its a reference or a pointer that links towards next node
+
+the link ends when the node is null is stored
+in java we dont have pointer variables which points to addreses of other variables so here we use refernce variables that point to next object
+note : in java we apply linked list using oopsi.e classes and objects
+
+we create node class and create multiple objects that act as node in the linked list
+ex :
+class node{
+    int node;
+    node next; // object of node class
+
+    // the following method stores data inside the "node" variable and next i.e reference variable is set to null
+
+    public Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+
+there two  main nodes that is present in every linked list :
+1. head node - the first node in ll
+2. tail node - the last node which is before the null node
+
+with help of next we can travel to next node till we reach end of the ll.
+we write methods to perform operations like search,add,delete,removing elements from ll and call it in main function
+
+
+whenever head is null then linked list is said to be empty
+
+adding elements in ll : in 3 ways
+1. add first - replacing current head with new (more than 2 nodes)
+step 1: create node
+step 2: initialize newNode next as head i.e linking with previous head node
+step 3: change head value to newNode as it is the new head
+
+- create new node
+- new node next = head 
+- head = new node
+
+for the case where linked ist is null then (0 nodes) --> base case
+- we assign head and tail as the same first node
+
+for the case when the head and tail nodes are the same (1 node)
+- we create a new node
+- new node next = head 
+- head = new node
+
+2. add last - replace current last node with new 
+step 1: create node i.e new node
+step 2: change tail nodes next from null to pointing towards new node (tail.next = newNode)
+step 3: change tail value to newNode as it is the new tail (tail = newNode)
+
+for the case where linked ist is null then (0 nodes) --> base case
+- we assign head and tail as the same first node i.e we perform all the above 3 steps and here we initialize head and tail as new node
+
+3. add middle - adding a node in the given index in middle of the ll and data will also be given
+step 1 : create a temp pointer which will traverse through ll and also create a new node
+step 2 : traverse till index-1 using while loop and update temp simultaneously
+step 3 : then set newnode next as temp next i.e index-1 nodes next and temp next as newnode 
+
+
+we can known size of linked list by using size static variable i.e whenever while adding a node we increment size and while removing we decrement size variable
+
+
+in java when an object is not being used then grabage collector deletes it from the memory
+
+removing elements in ll :
+1. remove first : we simply change head value to next node and java garbage collector automatically deletes the head node due to as there is no node pointing or linking towards it i.e its a singly linked list -s link is always forwarded
+head = head.next
+ - when linked list has only one node then we have to change both head and tail value to null
+ - when linked list is empty print "LL is empty"
+
+2. remove last : it is similar to remove first but here we change the tail value instead of head
+prev next = null
+tail = prev next 

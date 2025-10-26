@@ -1,0 +1,16 @@
+it is one the pardigm of programming in which we use classes and objects while coding
+classes & objects :
+classes - it is a blueprint of an object or it is group of entities/objects with similar properties
+objects - entities in the real world or real-world entities
+
+example : pen - a object 
+
+class Room - a class in which group of entities/objects named students are present 
+grade,school name,uniform,books,syllabus, are commom properties for student object in the classroom class
+
+classes = attributes/properties + functions (behaviour)
+exampe : pen class
+pen color,pen tip size, pen prize these all are pen object's properties
+changeColor(),changeTipSize() these are the functions/methods which are used to change properties of the pen object
+
+
